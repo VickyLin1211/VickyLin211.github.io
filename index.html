@@ -3,76 +3,274 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hsin Hui Lin | Portfolio</title>
+
+  <title>Hsin Hui Lin | Marketing Portfolio</title>
 
   <style>
+    :root {
+      --bg: #f7f3ee;
+      --card: #ffffff;
+      --text: #2f2a26;
+      --muted: #625a53;
+      --line: #e5ddd3;
+      --accent: #2c5d8a;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
-      background: #f7f3ee;
-      color: #2f2a26;
-      line-height: 1.6;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
     }
 
     .container {
       width: 90%;
-      max-width: 1000px;
+      max-width: 1050px;
       margin: auto;
     }
 
     nav {
       display: flex;
       justify-content: space-between;
-      padding: 20px 0;
-      border-bottom: 1px solid #e5ddd3;
+      align-items: center;
+      padding: 22px 0;
+      border-bottom: 1px solid var(--line);
+      position: sticky;
+      top: 0;
+      background: rgba(247, 243, 238, 0.96);
+      backdrop-filter: blur(10px);
+      z-index: 100;
     }
 
-    nav a {
+    .nav-name {
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    .nav-links a {
       margin-left: 20px;
       color: #6b625b;
       text-decoration: none;
+      font-size: 15px;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .hero {
+      padding: 95px 0 65px;
+      max-width: 850px;
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 12px;
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 16px;
     }
 
     h1 {
-      font-size: 48px;
-      margin-top: 80px;
+      font-size: 52px;
+      line-height: 1.12;
+      margin: 0 0 24px;
+      letter-spacing: -0.03em;
     }
 
     h2 {
-      margin-top: 60px;
-      font-size: 28px;
+      margin-top: 75px;
+      margin-bottom: 24px;
+      font-size: 30px;
+      letter-spacing: -0.02em;
+    }
+
+    h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-size: 22px;
     }
 
     p {
-      color: #5f5750;
+      color: var(--muted);
       font-size: 17px;
+      margin-top: 0;
     }
 
-    .card {
-      background: white;
-      border: 1px solid #eee;
-      border-radius: 16px;
-      padding: 20px;
-      margin-top: 20px;
-    }
-
-    ul {
-      color: #5f5750;
+    .hero p {
+      max-width: 760px;
+      font-size: 19px;
     }
 
     .btn {
       display: inline-block;
+      margin-top: 18px;
+      margin-right: 10px;
+      padding: 11px 20px;
+      border-radius: 999px;
+      border: 1px solid var(--text);
+      text-decoration: none;
+      color: var(--text);
+      font-size: 15px;
+      transition: 0.2s ease;
+    }
+
+    .btn:hover {
+      background: var(--text);
+      color: white;
+    }
+
+    .btn-primary {
+      background: var(--text);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      opacity: 0.88;
+    }
+
+    .section-intro {
+      max-width: 780px;
+      margin-bottom: 28px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid #ece6df;
+      border-radius: 18px;
+      padding: 26px;
       margin-top: 20px;
-      padding: 10px 18px;
-      border-radius: 20px;
-      border: 1px solid black;
+    }
+
+    .project-card {
+      padding: 30px;
+    }
+
+    .project-meta {
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      color: var(--muted);
+      padding-left: 22px;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    .project-link {
+      display: inline-block;
+      margin-top: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    .project-link:hover {
+      text-decoration: underline;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .skill-title {
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: var(--text);
+    }
+
+    .cert-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .cert-item {
+      background: var(--card);
+      border: 1px solid #ece6df;
+      border-radius: 14px;
+      padding: 18px 20px;
+    }
+
+    .cert-item strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .contact-card a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .contact-card a:hover {
+      text-decoration: underline;
     }
 
     footer {
-      margin-top: 80px;
-      padding: 30px 0;
-      color: #999;
+      margin-top: 90px;
+      padding: 35px 0 45px;
+      border-top: 1px solid var(--line);
+      color: #91887f;
       font-size: 14px;
+    }
+
+    @media (max-width: 800px) {
+      h1 {
+        font-size: 40px;
+      }
+
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+      }
+
+      .nav-links a {
+        margin-left: 0;
+        margin-right: 16px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      h1 {
+        font-size: 34px;
+      }
+
+      .hero {
+        padding-top: 65px;
+      }
+
+      .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px 14px;
+      }
+
+      .nav-links a {
+        margin: 0;
+      }
     }
   </style>
 </head>
@@ -81,135 +279,333 @@
 
 <div class="container">
 
+  <!-- NAV -->
   <nav>
-    <div><strong>Hsin Hui Lin</strong></div>
-    <div>
+    <div class="nav-name">Hsin Hui Lin</div>
+
+    <div class="nav-links">
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
       <a href="#skills">Skills</a>
+      <a href="#certifications">Certifications</a>
       <a href="#contact">Contact</a>
     </div>
   </nav>
 
+
   <!-- HERO -->
-  <h1>
-    Music Business student combining creativity, strategy, and platform thinking.
-  </h1>
+  <section class="hero">
 
-  <p>
-    I’m a Berklee College of Music student with a background in piano, marketing, and creative business strategy. I’m interested in building ideas that connect music, people, and digital experiences.
-  </p>
+    <div class="eyebrow">Marketing Portfolio</div>
 
-  <a class="btn" href="#projects">View My Work</a>
+    <h1>
+      Digital marketing, analytics, and growth strategy.
+    </h1>
+
+    <p>
+      I’m Hsin Hui Lin, a Berklee College of Music graduate specializing in
+      Music Business and Marketing. I enjoy turning research, consumer insights,
+      and data into practical marketing strategies that support measurable business growth.
+    </p>
+
+    <a class="btn btn-primary" href="#projects">
+      View Projects
+    </a>
+
+    <a class="btn" href="#contact">
+      Contact Me
+    </a>
+
+  </section>
+
 
   <!-- ABOUT -->
-  <h2 id="about">About Me</h2>
+  <section id="about">
 
-  <p>
-    I study Music Business at Berklee College of Music, where I focus on marketing, platform strategy, and the future of the music industry. My background in music helps me think creatively, while my academic projects strengthen my ability to approach ideas in a structured and strategic way.
-  </p>
+    <h2>About Me</h2>
 
-  <p>
-    I’m especially interested in work that sits between creativity and business — building concepts that are both meaningful and scalable.
-  </p>
+    <div class="section-intro">
+      <p>
+        I graduated from Berklee College of Music with a degree in
+        Music Business/Management, concentrating in Marketing.
+        My work combines creative thinking with structured analysis,
+        with a focus on digital marketing, consumer behavior,
+        campaign strategy, and business growth.
+      </p>
+
+      <p>
+        I’m especially interested in opportunities where marketing,
+        data, technology, and strategy intersect.
+      </p>
+    </div>
+
+  </section>
+
 
   <!-- EDUCATION -->
-  <h2>Education</h2>
+  <section>
 
-  <div class="card">
-    <p><strong>Berklee College of Music</strong></p>
-    <p>Bachelor of Music in Music Business (Expected 2026)</p>
-    <p>Boston, MA</p>
-  </div>
+    <h2>Education</h2>
+
+    <div class="card">
+      <h3>Berklee College of Music</h3>
+
+      <p>
+        B.M. in Music Business/Management — Marketing
+      </p>
+
+      <p>
+        Boston, MA · Graduated May 2026 · GPA: 3.7
+      </p>
+
+      <p>
+        Dean’s List · Berklee World Tour Scholarship
+      </p>
+    </div>
+
+  </section>
+
 
   <!-- PROJECTS -->
-  <h2 id="projects">Projects</h2>
+  <section id="projects">
 
-  <div class="card">
-    <h3>PAC Music — Global Music Education Platform</h3>
+    <h2>Featured Projects</h2>
 
-    <p>
-      A platform concept designed to connect music students and educators globally through online and offline learning.
+    <p class="section-intro">
+      Selected projects demonstrating digital marketing strategy,
+      market research, campaign development, analytics, and business problem-solving.
     </p>
 
-    <ul>
-      <li>Designed platform structure and user flow</li>
-      <li>Developed business model and pricing strategy</li>
-      <li>Explored scalable revenue models</li>
-      <li>Focused on accessibility and creative learning</li>
-    </ul>
 
-    <a href="https://vickylin1211.github.io/PAC-music/" target="_blank">
-      View Project →
-    </a>
-  </div>
+    <!-- DBOU -->
+    <div class="card project-card">
 
-  <div class="card">
-    <h3>Starbucks Soundwave — Marketing Concept</h3>
+      <div class="project-meta">
+        Independent Marketing Case Study
+      </div>
 
-    <p>
-      A concept connecting customer music preferences with personalized beverage recommendations using QR-based interaction.
-    </p>
+      <h3>
+        Digital Marketing Growth Strategy | DBOU Aluminum
+      </h3>
 
-    <ul>
-      <li>Focused on user engagement</li>
-      <li>Explored music + brand interaction</li>
-      <li>Developed digital marketing concept</li>
-    </ul>
-  </div>
+      <p>
+        An independent digital marketing case study focused on improving
+        local search visibility, qualified lead generation, and long-term
+        digital growth for a Taiwan-based aluminum doors and windows manufacturer.
+      </p>
+
+      <ul>
+        <li>Conducted website and SEO audits</li>
+        <li>Researched local and product-focused search keywords</li>
+        <li>Developed a Google Ads campaign structure and budget allocation strategy</li>
+        <li>Identified local SEO, content, and conversion opportunities</li>
+        <li>Created a phased marketing implementation roadmap</li>
+      </ul>
+
+      <a
+        class="project-link"
+        href="DBOU_Digital_Marketing_Strategy.pdf"
+        target="_blank"
+        rel="noopener"
+      >
+        View Case Study →
+      </a>
+
+    </div>
+
+
+    <!-- PAC MUSIC -->
+    <div class="card project-card">
+
+      <div class="project-meta">
+        Business Strategy
+      </div>
+
+      <h3>
+        PAC Music — Global Music Education Platform
+      </h3>
+
+      <p>
+        A business and platform strategy project exploring how a digital music
+        education platform could connect students and educators through scalable,
+        accessible learning experiences.
+      </p>
+
+      <ul>
+        <li>Conducted competitive research across 20+ platforms</li>
+        <li>Developed pricing and revenue strategy</li>
+        <li>Built financial models in Excel</li>
+        <li>Analyzed market positioning and platform opportunities</li>
+        <li>Led cross-functional project planning and execution</li>
+      </ul>
+
+      <a
+        class="project-link"
+        href="https://vickylin1211.github.io/PAC-music/"
+        target="_blank"
+        rel="noopener"
+      >
+        View Project →
+      </a>
+
+    </div>
+
+
+    <!-- STARBUCKS -->
+    <div class="card project-card">
+
+      <div class="project-meta">
+        Marketing Strategy
+      </div>
+
+      <h3>
+        Starbucks Soundwave — Personalized Marketing Concept
+      </h3>
+
+      <p>
+        A data-driven marketing concept connecting Spotify listening behavior
+        with personalized beverage and content recommendations to strengthen
+        customer engagement.
+      </p>
+
+      <ul>
+        <li>Developed a personalized campaign concept</li>
+        <li>Analyzed consumer behavior and audience engagement</li>
+        <li>Explored QR-based digital interaction</li>
+        <li>Connected music preferences with brand experience</li>
+        <li>Evaluated campaign performance opportunities</li>
+      </ul>
+
+    </div>
+
+  </section>
+
 
   <!-- SKILLS -->
-  <h2 id="skills">Skills</h2>
+  <section id="skills">
 
-  <div class="card">
-    <p><strong>Strategy</strong></p>
-    <ul>
-      <li>Marketing Strategy</li>
-      <li>Brand Positioning</li>
-      <li>Platform Thinking</li>
-    </ul>
-  </div>
+    <h2>Skills</h2>
 
-  <div class="card">
-    <p><strong>Creative</strong></p>
-    <ul>
-      <li>Piano Performance</li>
-      <li>Content Creation</li>
-      <li>Music Industry Knowledge</li>
-    </ul>
-  </div>
+    <div class="grid-3">
 
-  <div class="card">
-    <p><strong>Tools</strong></p>
-    <ul>
-      <li>HTML / CSS (Basic)</li>
-      <li>Canva</li>
-      <li>Excel</li>
-    </ul>
-  </div>
+      <div class="card">
+        <div class="skill-title">Marketing</div>
 
-  <!-- ADDITIONAL -->
-  <h2>Additional</h2>
+        <ul>
+          <li>Digital Marketing Strategy</li>
+          <li>SEO</li>
+          <li>Keyword Research</li>
+          <li>Google Ads</li>
+          <li>Content Strategy</li>
+          <li>Competitive Analysis</li>
+        </ul>
+      </div>
 
-  <div class="card">
-    <ul>
-      <li>Interested in Web3 and music ownership</li>
-      <li>Learning coding and digital tools</li>
-      <li>Golf player</li>
-      <li>Interest in sports and NBA</li>
-    </ul>
-  </div>
+      <div class="card">
+        <div class="skill-title">Analytics</div>
+
+        <ul>
+          <li>Google Analytics</li>
+          <li>Excel</li>
+          <li>Google Sheets</li>
+          <li>Campaign Performance Analysis</li>
+          <li>Consumer Behavior Analysis</li>
+          <li>Market Research</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="skill-title">Tools</div>
+
+        <ul>
+          <li>HubSpot</li>
+          <li>Canva</li>
+          <li>Google Workspace</li>
+          <li>Microsoft Office</li>
+          <li>HTML / CSS</li>
+          <li>AI-assisted workflows</li>
+        </ul>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications">
+
+    <h2>Certifications</h2>
+
+    <div class="cert-list">
+
+      <div class="cert-item">
+        <strong>Google Analytics Certification</strong>
+        Google Skillshop · 2026
+      </div>
+
+      <div class="cert-item">
+        <strong>Google Ads Search Certification</strong>
+        Google Skillshop · 2026
+      </div>
+
+      <div class="cert-item">
+        <strong>Google Ads Measurement Certification</strong>
+        Google Skillshop · 2026
+      </div>
+
+      <div class="cert-item">
+        <strong>HubSpot Marketing Hub Software Certification</strong>
+        HubSpot Academy · 2026
+      </div>
+
+      <div class="cert-item">
+        <strong>HubSpot Social Media Certification</strong>
+        HubSpot Academy · 2026
+      </div>
+
+    </div>
+
+  </section>
+
 
   <!-- CONTACT -->
-  <h2 id="contact">Contact</h2>
+  <section id="contact">
 
-  <div class="card">
-    <p>Email:</p>
-    <p><a href="mailto:linvicky1211@gmail.com">linvicky1211@gmail.com</a></p>
-  </div>
+    <h2>Contact</h2>
+
+    <div class="card contact-card">
+
+      <p>
+        <strong>Email</strong><br>
+        <a href="mailto:linvicky1211@gmail.com">
+          linvicky1211@gmail.com
+        </a>
+      </p>
+
+      <p>
+        <strong>LinkedIn</strong><br>
+        <a
+          href="https://www.linkedin.com/in/hsin-hui-lin-65278b382/"
+          target="_blank"
+          rel="noopener"
+        >
+          View LinkedIn Profile
+        </a>
+      </p>
+
+      <p>
+        <strong>Location</strong><br>
+        Denver, Colorado
+      </p>
+
+    </div>
+
+  </section>
+
 
   <footer>
-    © 2026 Hsin Hui Lin
+    © 2026 Hsin Hui Lin · Marketing Portfolio
   </footer>
 
 </div>
