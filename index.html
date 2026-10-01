@@ -26,7 +26,8 @@
 
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Helvetica, Arial, sans-serif;
       background: var(--bg);
       color: var(--text);
       line-height: 1.65;
@@ -156,6 +157,11 @@
       padding: 30px;
     }
 
+    .featured-project {
+      background: linear-gradient(135deg, #fffdf5 0%, #fff8df 100%);
+      border-color: #eadb9c;
+    }
+
     .project-meta {
       color: var(--accent);
       font-size: 13px;
@@ -163,6 +169,23 @@
       text-transform: uppercase;
       letter-spacing: 0.08em;
       margin-bottom: 10px;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 17px 0 10px;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 6px 11px;
+      border-radius: 999px;
+      background: rgba(44, 93, 138, 0.1);
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 600;
     }
 
     ul {
@@ -279,7 +302,7 @@
 
 <div class="container">
 
-  <!-- NAV -->
+  <!-- NAVIGATION -->
   <nav>
     <div class="nav-name">Hsin Hui Lin</div>
 
@@ -291,7 +314,6 @@
       <a href="#contact">Contact</a>
     </div>
   </nav>
-
 
   <!-- HERO -->
   <section class="hero">
@@ -305,7 +327,8 @@
     <p>
       I’m Hsin Hui Lin, a Berklee College of Music graduate specializing in
       Music Business and Marketing. I enjoy turning research, consumer insights,
-      and data into practical marketing strategies that support measurable business growth.
+      and data into practical marketing strategies that support measurable
+      business growth.
     </p>
 
     <a class="btn btn-primary" href="#projects">
@@ -317,7 +340,6 @@
     </a>
 
   </section>
-
 
   <!-- ABOUT -->
   <section id="about">
@@ -340,7 +362,6 @@
     </div>
 
   </section>
-
 
   <!-- EDUCATION -->
   <section>
@@ -365,7 +386,6 @@
 
   </section>
 
-
   <!-- PROJECTS -->
   <section id="projects">
 
@@ -373,9 +393,69 @@
 
     <p class="section-intro">
       Selected projects demonstrating digital marketing strategy,
-      market research, campaign development, analytics, and business problem-solving.
+      market research, campaign development, analytics, and
+      business problem-solving.
     </p>
 
+    <!-- PAC MUSIC SOCIAL MEDIA PROJECT -->
+    <div class="card project-card featured-project">
+
+      <div class="project-meta">
+        Social Media Strategy · Content Creation · Video
+      </div>
+
+      <h3>
+        PAC Music — Social Media Campaign Strategy &amp; Hero Video
+      </h3>
+
+      <p>
+        An education-focused content campaign designed to reposition music
+        practice as a creative journey rather than a repetitive obligation.
+        The project combines audience insight, brand positioning, platform
+        strategy, an eight-week content plan, and a short-form hero video.
+      </p>
+
+      <ul>
+        <li>
+          Identified the audience insight behind declining student motivation
+        </li>
+        <li>
+          Developed the campaign message “From Practice to Real Music”
+        </li>
+        <li>
+          Created an eight-week social content and engagement plan
+        </li>
+        <li>
+          Planned content for Instagram Reels, TikTok, carousels, and Stories
+        </li>
+        <li>
+          Developed the concept and copy, selected visual assets, and edited
+          a 28-second brand video
+        </li>
+        <li>
+          Designed the campaign presentation and visual system in Canva
+        </li>
+      </ul>
+
+      <div class="project-tags">
+        <span class="tag">Content Strategy</span>
+        <span class="tag">Social Media</span>
+        <span class="tag">Campaign Planning</span>
+        <span class="tag">Canva</span>
+        <span class="tag">Video Editing</span>
+        <span class="tag">Education Marketing</span>
+      </div>
+
+      <a
+        class="project-link"
+        href="https://canva.link/oxd2zverbfv8i8i"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        View Campaign &amp; Video →
+      </a>
+
+    </div>
 
     <!-- DBOU -->
     <div class="card project-card">
@@ -391,30 +471,43 @@
       <p>
         An independent digital marketing case study focused on improving
         local search visibility, qualified lead generation, and long-term
-        digital growth for a Taiwan-based aluminum doors and windows manufacturer.
+        digital growth for a Taiwan-based aluminum doors and windows
+        manufacturer.
       </p>
 
       <ul>
         <li>Conducted website and SEO audits</li>
         <li>Researched local and product-focused search keywords</li>
-        <li>Developed a Google Ads campaign structure and budget allocation strategy</li>
-        <li>Identified local SEO, content, and conversion opportunities</li>
+        <li>
+          Developed a Google Ads campaign structure and budget allocation
+          strategy
+        </li>
+        <li>
+          Identified local SEO, content, and conversion opportunities
+        </li>
         <li>Created a phased marketing implementation roadmap</li>
       </ul>
+
+      <div class="project-tags">
+        <span class="tag">SEO</span>
+        <span class="tag">Google Ads Strategy</span>
+        <span class="tag">Market Research</span>
+        <span class="tag">Lead Generation</span>
+        <span class="tag">Conversion Strategy</span>
+      </div>
 
       <a
         class="project-link"
         href="DBOU_Digital_Marketing_Strategy.pdf"
         target="_blank"
-        rel="noopener"
+        rel="noopener noreferrer"
       >
         View Case Study →
       </a>
 
     </div>
 
-
-    <!-- PAC MUSIC -->
+    <!-- PAC MUSIC BUSINESS STRATEGY -->
     <div class="card project-card">
 
       <div class="project-meta">
@@ -427,29 +520,36 @@
 
       <p>
         A business and platform strategy project exploring how a digital music
-        education platform could connect students and educators through scalable,
-        accessible learning experiences.
+        education platform could connect students and educators through
+        scalable, accessible learning experiences.
       </p>
 
       <ul>
-        <li>Conducted competitive research across 20+ platforms</li>
+        <li>Conducted competitive research across more than 20 platforms</li>
         <li>Developed pricing and revenue strategy</li>
         <li>Built financial models in Excel</li>
         <li>Analyzed market positioning and platform opportunities</li>
-        <li>Led cross-functional project planning and execution</li>
+        <li>Developed the project plan and supporting recommendations</li>
       </ul>
+
+      <div class="project-tags">
+        <span class="tag">Competitive Research</span>
+        <span class="tag">Business Strategy</span>
+        <span class="tag">Financial Modeling</span>
+        <span class="tag">Market Positioning</span>
+        <span class="tag">Excel</span>
+      </div>
 
       <a
         class="project-link"
         href="https://vickylin1211.github.io/PAC-music/"
         target="_blank"
-        rel="noopener"
+        rel="noopener noreferrer"
       >
         View Project →
       </a>
 
     </div>
-
 
     <!-- STARBUCKS -->
     <div class="card project-card">
@@ -476,10 +576,17 @@
         <li>Evaluated campaign performance opportunities</li>
       </ul>
 
+      <div class="project-tags">
+        <span class="tag">Personalization</span>
+        <span class="tag">Consumer Insights</span>
+        <span class="tag">Campaign Strategy</span>
+        <span class="tag">Brand Experience</span>
+        <span class="tag">Audience Engagement</span>
+      </div>
+
     </div>
 
   </section>
-
 
   <!-- SKILLS -->
   <section id="skills">
@@ -518,19 +625,18 @@
         <div class="skill-title">Tools</div>
 
         <ul>
-          <li>HubSpot</li>
+          <li>HubSpot Coursework and Certification</li>
           <li>Canva</li>
           <li>Google Workspace</li>
           <li>Microsoft Office</li>
           <li>HTML / CSS</li>
-          <li>AI-assisted workflows</li>
+          <li>AI-Assisted Workflows</li>
         </ul>
       </div>
 
     </div>
 
   </section>
-
 
   <!-- CERTIFICATIONS -->
   <section id="certifications">
@@ -568,7 +674,6 @@
 
   </section>
 
-
   <!-- CONTACT -->
   <section id="contact">
 
@@ -588,7 +693,7 @@
         <a
           href="https://www.linkedin.com/in/hsin-hui-lin-65278b382/"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
         >
           View LinkedIn Profile
         </a>
@@ -602,7 +707,6 @@
     </div>
 
   </section>
-
 
   <footer>
     © 2026 Hsin Hui Lin · Marketing Portfolio
